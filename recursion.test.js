@@ -51,7 +51,7 @@ function division(number, dividedBy) {
 
     }
 
-
+    
 /* Write a function that implement Math.pow(x,n) but using recursion
 Example:
 pow(2,4) = 16
