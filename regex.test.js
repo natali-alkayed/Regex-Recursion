@@ -12,7 +12,7 @@ function capitalA(s){
 which end with io (example@example.io) */
 
 function ioEmail(email){
-    let regex = /[a-z]+@[a-z]+\.io$/;
+    let regex = /^[a-z]+@[a-z]+.io$/;
     return regex.test(email);
 
 }
@@ -24,9 +24,12 @@ required extention are jpg, jpeg and png.
 
 function imagesSearcher(text){
     let arr = [];
-    let regex = /\b\w+\.(jpg|jpeg|png)\b/gi;
-    arr = text.match(regex);
+    let regex = /\b[\w-]+.(jpg|jpeg|png)\b/gi;
 
+    arr = text.match(regex);
+    if (arr == null){
+        arr = [];
+    }
     return arr;
 }
 
